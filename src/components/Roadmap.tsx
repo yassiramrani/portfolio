@@ -1,4 +1,4 @@
-import { FiBookOpen, FiBriefcase, FiAward, FiStar } from 'react-icons/fi';
+import { FiBookOpen, FiAward, FiStar } from 'react-icons/fi';
 import './Roadmap.css';
 
 interface RoadmapProps {
@@ -8,32 +8,32 @@ interface RoadmapProps {
 const Roadmap = ({ id }: RoadmapProps) => {
   const roadmapItems = [
     {
-      year: 'Present',
-      title: '4th Year Engineering Student',
-      company: 'Engineering College',
-      description: 'Currently pursuing software engineering degree with a focus on full-stack development, ML/AI integrations, and cloud architectures. Actively building projects like DiaBLife and VoiceLegacy.',
-      icon: <FiBookOpen size={24} />
-    },
-    {
-      year: '2025 (Expected)',
-      title: 'Software Engineering Intern',
-      company: 'Tech Industry',
-      description: 'Looking to apply my skills in scalable systems, React/Vite frontends, and backend engineering (Python/Java) in a professional tech environment.',
-      icon: <FiBriefcase size={24} />
+      year: '2026',
+      title: 'President & Founder',
+      company: 'InnovXtech Club (EMSI Tanger)',
+      description: 'Led the student innovation club, organizing major events like the 2024-2025 Integration Day (flashback day with DJ and team-building) uniting students through technology.',
+      icon: <FiStar size={24} />
     },
     {
       year: '2026',
-      title: 'Graduation & Full-Time Role',
-      company: 'Future Career',
-      description: 'Graduating as a Software Engineer ready to build impactful, scalable, and highly available web applications worldwide.',
+      title: 'Honorary Participation Award',
+      company: 'The Merge Hackathon 2026',
+      description: 'Selected among top 20 projects globally for "VoiceLegacy", an AI-powered voice preservation platform built with FastAPI, React, and ElevenLabs API.',
       icon: <FiAward size={24} />
     },
     {
-      year: 'Long-term Goal',
-      title: 'Senior Software/Cloud Architect',
-      company: 'Career Aspiration',
-      description: 'Leading technical teams and designing large-scale distributed systems and advanced AI solutions.',
-      icon: <FiStar size={24} />
+      year: 'Recent',
+      title: '2nd Prize Winner',
+      company: 'Hackathon "IA & Villes Résilientes 2030" (LSInnovXTech)',
+      description: 'Won 2nd place with "Guidini", a digital companion offering authentic tourism experiences and local employment opportunities for World Cup 2030.',
+      icon: <FiAward size={24} />
+    },
+    {
+      year: 'Present',
+      title: '4th Year Engineering Student',
+      company: 'EMSI Tanger',
+      description: 'Ambassador Career Center EMSI Tanger. Delivered "Wijha" (intelligent travel organization platform using Laravel/Tailwind) as team project.',
+      icon: <FiBookOpen size={24} />
     }
   ];
 

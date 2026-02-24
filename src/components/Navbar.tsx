@@ -30,7 +30,10 @@ const Navbar = ({ activeSection }: NavbarProps) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <a href="#home">Yassir<span className="accent">.dev</span></a>
+          <a href="#home">
+            <img src="/me.jpeg" alt="Yassir" className="navbar-profile-pic" />
+            <span>Yassir<span className="accent">.dev</span></span>
+          </a>
         </div>
 
         {/* Desktop Navigation */}

@@ -29,6 +29,20 @@ const Projects = ({ id }: ProjectsProps) => {
       demo: ''
     },
     {
+      title: 'Guidini',
+      description: '2nd Prize winning project at Hackathon IA & Villes Résilientes 2030. A digital companion for authentic tourism experiences locally in Morocco, supporting World Cup 2030 initiatives.',
+      tags: ['React', 'Innovation', 'Hackathon'],
+      github: 'https://github.com/yassiramrani',
+      demo: ''
+    },
+    {
+      title: 'Wijha',
+      description: 'Intelligent aid platform for travel organization. Full stack academic project featuring API integrations for hotels and automated visa condition verification.',
+      tags: ['Laravel', 'Tailwind CSS', 'MySQL', 'JavaScript'],
+      github: 'https://github.com/yassiramrani',
+      demo: ''
+    },
+    {
       title: 'infra_guard_part1',
       description: 'An infrastructure and security monitoring web interface prototype for system oversight.',
       tags: ['HTML', 'CSS', 'Security'],
