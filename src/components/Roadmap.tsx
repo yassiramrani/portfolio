@@ -1,4 +1,4 @@
-import { FiBookOpen, FiAward, FiStar } from 'react-icons/fi';
+import { FiAward, FiStar, FiBriefcase, FiShield } from 'react-icons/fi';
 import './Roadmap.css';
 
 interface RoadmapProps {
@@ -8,11 +8,18 @@ interface RoadmapProps {
 const Roadmap = ({ id }: RoadmapProps) => {
   const roadmapItems = [
     {
-      year: '2026',
-      title: 'President & Founder',
-      company: 'InnovXtech Club (EMSI Tanger)',
-      description: 'Led the student innovation club, organizing major events like the 2024-2025 Integration Day (flashback day with DJ and team-building) uniting students through technology.',
-      icon: <FiStar size={24} />
+      year: 'Jul 2025 - Aug 2025',
+      title: 'Software Engineer Intern',
+      company: 'Yazaki Morocco (Hybrid)',
+      description: 'Summer internship focused on Software Infrastructure and Software Design in Tangier.',
+      icon: <FiBriefcase size={24} />
+    },
+    {
+      year: 'Jul 2024 - Aug 2024',
+      title: 'Software Engineer Intern',
+      company: 'Lear Corporation (On-site)',
+      description: 'Summer internship focused on Preventive Maintenance and System Repair.',
+      icon: <FiBriefcase size={24} />
     },
     {
       year: '2026',
@@ -29,11 +36,32 @@ const Roadmap = ({ id }: RoadmapProps) => {
       icon: <FiAward size={24} />
     },
     {
-      year: 'Present',
-      title: '4th Year Engineering Student',
+      year: 'Dec 2024',
+      title: '1st Place Winner - Hackathon Vert',
+      company: 'EMSI Tanger & Es.Maroc.Org',
+      description: 'Led "Team Thinkera" to victory with "PetyPlant", an intelligent automatic watering system and AI-driven plant community platform.',
+      icon: <FiAward size={24} />
+    },
+    {
+      year: 'Jul 2024',
+      title: '2nd Place Winner - Innovation Competition',
       company: 'EMSI Tanger',
-      description: 'Ambassador Career Center EMSI Tanger. Delivered "Wijha" (intelligent travel organization platform using Laravel/Tailwind) as team project.',
-      icon: <FiBookOpen size={24} />
+      description: 'Awarded for "HapPlant", a plant surveillance and automated irrigation system integrating an AI chatbot for personalized advice.',
+      icon: <FiAward size={24} />
+    },
+    {
+      year: '2024',
+      title: 'Cybersecurity Workshop Animator',
+      company: 'InnovXtech Club',
+      description: 'Organized and co-animated workshops on Reverse Engineering, Pentesting, and Cryptography at EMSI and Lycée Technique Moulay Youssef.',
+      icon: <FiShield size={24} />
+    },
+    {
+      year: '2022 - 2027',
+      title: 'President & Founder / Engineering Student',
+      company: 'InnovXtech Club (EMSI Tanger)',
+      description: 'Studying Software Engineering while serving as President of InnovXtech Club. Delivered "Wijha" (intelligent travel organization platform using Laravel/Tailwind) as an academic project.',
+      icon: <FiStar size={24} />
     }
   ];
 

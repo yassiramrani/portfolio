@@ -29,6 +29,20 @@ const Projects = ({ id }: ProjectsProps) => {
       demo: ''
     },
     {
+      title: 'PetyPlant',
+      description: '1st Place winning project at Hackathon Vert. An intelligent automatic watering system combined with a web platform and AI to analyze and optimize plant needs.',
+      tags: ['GreenTech', 'AI', 'IoT', 'Hackathon'],
+      github: 'https://github.com/yassiramrani',
+      demo: ''
+    },
+    {
+      title: 'HapPlant',
+      description: '2nd Place winning project at EMSI Innovation Competition. A plant surveillance and automated irrigation system featuring an AI chatbot for personalized botanical advice.',
+      tags: ['IoT', 'AI Chatbot', 'Innovation'],
+      github: 'https://github.com/yassiramrani',
+      demo: ''
+    },
+    {
       title: 'Guidini',
       description: '2nd Prize winning project at Hackathon IA & Villes Résilientes 2030. A digital companion for authentic tourism experiences locally in Morocco, supporting World Cup 2030 initiatives.',
       tags: ['React', 'Innovation', 'Hackathon'],
