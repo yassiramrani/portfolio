@@ -1,4 +1,4 @@
-import { FiCode, FiCpu, FiCloudLightning } from 'react-icons/fi';
+import { FiCode, FiCpu, FiCloudLightning, FiAward } from 'react-icons/fi';
 import './About.css';
 
 interface AboutProps {
@@ -71,6 +71,62 @@ const About = ({ id }: AboutProps) => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="certifications-section">
+            <h3 className="section-title" style={{ fontSize: '1.8rem', marginBottom: '2rem' }}>
+              Licenses & <span className="accent">Certifications</span>
+            </h3>
+            <div className="cert-grid">
+              {[
+                {
+                  title: 'Using Python to Access Web Data',
+                  issuer: 'University of Michigan',
+                  date: 'Issued May 2025'
+                },
+                {
+                  title: 'Software Engineering: Software Design and Project Management',
+                  issuer: 'The Hong Kong University of Science and Technology',
+                  date: 'Issued May 2025'
+                },
+                {
+                  title: 'Introduction à la programmation orientée objet (en C++)',
+                  issuer: 'École Polytechnique Fédérale de Lausanne',
+                  date: 'Issued Jan 2025'
+                },
+                {
+                  title: 'Building Web Applications in PHP',
+                  issuer: 'University of Michigan',
+                  date: 'Issued Jan 2025' /* Assuming Jan 2025 based on surrounding certs */
+                },
+                {
+                  title: 'Interactivity with JavaScript',
+                  issuer: 'University of Michigan',
+                  date: 'Issued Jan 2025' /* Assuming Jan 2025 based on surrounding certs */
+                },
+                {
+                  title: 'ESL002: Intermediate English as a Second Language',
+                  issuer: 'Saylor Academy',
+                  date: 'Issued Jan 2023'
+                },
+                {
+                  title: 'EF SET English Certificate 73/100 (C2 Proficient)',
+                  issuer: 'EF SET',
+                  date: 'Issued Feb 2022'
+                }
+              ].map((cert, index) => (
+                <div key={index} className="cert-card">
+                  <div className="cert-icon">
+                    <FiAward size={24} />
+                  </div>
+                  <div className="cert-info">
+                    <h4 className="cert-title">{cert.title}</h4>
+                    <span className="cert-issuer">{cert.issuer}</span>
+                    <span className="cert-date">{cert.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
