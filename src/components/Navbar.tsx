@@ -21,6 +21,7 @@ const Navbar = ({ activeSection }: NavbarProps) => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Roadmap', href: '#roadmap' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];

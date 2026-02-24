@@ -11,22 +11,36 @@ const Projects = ({ id }: ProjectsProps) => {
       title: 'VoiceLegacy',
       description: 'A comprehensive voice cloning application allowing users to synthesize speech using AI. Built backend with FastAPI and deployed to Hugging Face Spaces, with a React frontend hosted on Vercel.',
       tags: ['React', 'FastAPI', 'Python', 'AI/ML'],
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      github: 'https://github.com/yassiramrani/VoiceLegacy',
+      demo: ''
     },
     {
       title: 'DiaBLife',
       description: 'An innovative healthcare dashboard designed for a hackathon. Integrated complex machine learning models into a user-friendly React interface with a robust reporting system.',
-      tags: ['React', 'Dashboard', 'Machine Learning'],
-      github: 'https://github.com',
+      tags: ['React', 'Dashboard', 'Machine Learning', 'Jupyter Notebook'],
+      github: 'https://github.com/yassiramrani/DIABLIFE',
       demo: ''
     },
     {
-      title: 'Supabase Auth Flow',
-      description: 'Secure authentication system implementing JWT for enhanced privacy. Handled complex encryption compatibility issues and provided seamless user registration/login experiences.',
-      tags: ['React', 'Supabase', 'Authentication', 'Security'],
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      title: 'mhealth',
+      description: 'A mobile health (mHealth) backend and tracking application focused on recording and reporting user health metrics.',
+      tags: ['Java', 'HealthTech', 'Backend'],
+      github: 'https://github.com/yassiramrani/mhealth',
+      demo: ''
+    },
+    {
+      title: 'infra_guard_part1',
+      description: 'An infrastructure and security monitoring web interface prototype for system oversight.',
+      tags: ['HTML', 'CSS', 'Security'],
+      github: 'https://github.com/yassiramrani/infra_guard_part1',
+      demo: ''
+    },
+    {
+      title: 'taskmanager-web',
+      description: 'A comprehensive task manager web application designed to help users organize their daily schedules and activities efficiently.',
+      tags: ['HTML', 'Web Development'],
+      github: 'https://github.com/yassiramrani/taskmanager-web',
+      demo: ''
     }
   ];
 

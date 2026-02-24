@@ -28,17 +28,20 @@ const Hero = ({ id }: HeroProps) => {
               View My Work <FiArrowRight className="btn-icon" />
             </a>
             <div className="hero-socials">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Github">
+              <a href="https://github.com/yassiramrani" target="_blank" rel="noopener noreferrer" aria-label="Github">
                 <FiGithub size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/yaamrani/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FiLinkedin size={24} />
               </a>
-              <a href="mailto:contact@example.com" aria-label="Email">
+              <a href="mailto:amraniyassir04@gmail.com" aria-label="Email">
                 <FiMail size={24} />
               </a>
             </div>
           </div>
+        </div>
+        <div className="hero-image-container animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <img src="/me.jpeg" alt="Yassir Amraani" className="hero-image" />
         </div>
       </div>
       

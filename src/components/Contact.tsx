@@ -23,14 +23,14 @@ const Contact = ({ id }: ContactProps) => {
             to get back to you!
           </p>
 
-          <a href="mailto:contact@example.com" className="btn btn-primary contact-btn">
+          <a href="mailto:amraniyassir04@gmail.com" className="btn btn-primary contact-btn">
             Say Hello
           </a>
 
           <div className="contact-info">
             <div className="info-item">
               <FiMail className="info-icon" />
-              <span>contact@example.com</span>
+              <span>amraniyassir04@gmail.com</span>
             </div>
             <div className="info-item">
               <FiMapPin className="info-icon" />
@@ -39,10 +39,10 @@ const Contact = ({ id }: ContactProps) => {
           </div>
 
           <div className="footer-socials">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Github">
+            <a href="https://github.com/yassiramrani" target="_blank" rel="noopener noreferrer" aria-label="Github">
               <FiGithub size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/yaamrani/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FiLinkedin size={20} />
             </a>
           </div>
