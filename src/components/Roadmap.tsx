@@ -57,10 +57,10 @@ const Roadmap = ({ id }: RoadmapProps) => {
       icon: <FiShield size={24} />
     },
     {
-      year: '2022 - 2027',
-      title: 'President & Founder / Engineering Student',
+      year: '2026 - Present',
+      title: 'President / Engineering Student',
       company: 'InnovXtech Club (EMSI Tanger)',
-      description: 'Studying Software Engineering while serving as President of InnovXtech Club. Delivered "Wijha" (intelligent travel organization platform using Laravel/Tailwind) as an academic project.',
+      description: 'Studying Software Engineering while serving as President of InnovXtech Club since 2026. Delivered "Wijha" (intelligent travel organization platform using Laravel/Tailwind) as an academic project.',
       icon: <FiStar size={24} />
     }
   ];
