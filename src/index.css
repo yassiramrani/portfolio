@@ -137,3 +137,25 @@ a:hover {
 .animate-fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
+
+/* RTL Support - Arabic Specific Tweaks */
+[dir="rtl"] {
+  font-family: 'Cairo', 'Tajawal', var(--font-sans), sans-serif;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+  font-family: 'Cairo', 'Tajawal', var(--font-display), sans-serif;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .btn-icon {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .hero-layout {
+  text-align: right;
+}
+
+[dir="rtl"] .timeline-item.left .timeline-content {
+  text-align: left;
+}

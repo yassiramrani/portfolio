@@ -1,4 +1,5 @@
 import { FiArrowRight, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './Hero.css';
 
 interface HeroProps {
@@ -6,27 +7,27 @@ interface HeroProps {
 }
 
 const Hero = ({ id }: HeroProps) => {
+  const { t } = useTranslation();
+
   return (
     <section id={id} className="hero section">
       <div className="container">
         <div className="hero-layout">
           <div className="hero-content">
             <h2 className="hero-subtitle animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Hello, I'm
+              {t('hero.greeting')}
             </h2>
             <h1 className="hero-title animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Yassir Amrani
               <br />
-              <span className="gradient-text">Software Engineer</span>
+              <span className="gradient-text">{t('hero.role')}</span>
             </h1>
             <p className="hero-description animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              I'm a 4th-year engineering student passionate about building scalable,
-              user-centric web applications and exploring innovative solutions in
-              cloud and AI technologies.
+              {t('hero.description')}
             </p>
             <div className="hero-cta animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <a href="#projects" className="btn btn-primary">
-                View My Work <FiArrowRight className="btn-icon" />
+                {t('hero.cta')} <FiArrowRight className="btn-icon" />
               </a>
               <div className="hero-socials">
                 <a href="https://github.com/yassiramrani" target="_blank" rel="noopener noreferrer" aria-label="Github">

@@ -147,3 +147,97 @@
 .mobile-nav-link.active {
   color: var(--accent-primary);
 }
+
+/* Language Switcher */
+.lang-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(20, 184, 166, 0.3);
+  color: var(--accent-primary);
+}
+
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 120px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 0.2s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lang-menu button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.lang-menu button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.mobile-lang-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mobile-lang-options button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-lang-options button.active {
+  background: rgba(20, 184, 166, 0.15);
+  border-color: rgba(20, 184, 166, 0.4);
+  color: var(--accent-primary);
+}

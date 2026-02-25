@@ -1,4 +1,5 @@
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './Projects.css';
 
 interface ProjectsProps {
@@ -6,66 +7,68 @@ interface ProjectsProps {
 }
 
 const Projects = ({ id }: ProjectsProps) => {
+  const { t } = useTranslation();
+
   const projects = [
     {
       title: 'VoiceLegacy',
-      description: 'A comprehensive voice cloning application allowing users to synthesize speech using AI. Built backend with FastAPI and deployed to Hugging Face Spaces, with a React frontend hosted on Vercel.',
+      description: t('projects.items.voicelegacy.description'),
       tags: ['React', 'FastAPI', 'Python', 'AI/ML'],
       github: 'https://github.com/yassiramrani/VoiceLegacy',
       demo: ''
     },
     {
       title: 'DiaBLife',
-      description: 'An innovative healthcare dashboard designed for a hackathon. Integrated complex machine learning models into a user-friendly React interface with a robust reporting system.',
+      description: t('projects.items.diablife.description'),
       tags: ['React', 'Dashboard', 'Machine Learning', 'Jupyter Notebook'],
       github: 'https://github.com/yassiramrani/DIABLIFE',
       demo: ''
     },
     {
       title: 'mhealth',
-      description: 'A mobile health (mHealth) backend and tracking application focused on recording and reporting user health metrics.',
+      description: t('projects.items.mhealth.description'),
       tags: ['Java', 'HealthTech', 'Backend'],
       github: 'https://github.com/yassiramrani/mhealth',
       demo: ''
     },
     {
       title: 'PetyPlant',
-      description: '1st Place winning project at Hackathon Vert. An intelligent automatic watering system combined with a web platform and AI to analyze and optimize plant needs.',
+      description: t('projects.items.petyplant.description'),
       tags: ['GreenTech', 'AI', 'IoT', 'Hackathon'],
       github: 'https://github.com/yassiramrani',
       demo: ''
     },
     {
       title: 'HapPlant',
-      description: '2nd Place winning project at EMSI Innovation Competition. A plant surveillance and automated irrigation system featuring an AI chatbot for personalized botanical advice.',
+      description: t('projects.items.happlant.description'),
       tags: ['IoT', 'AI Chatbot', 'Innovation'],
       github: 'https://github.com/yassiramrani',
       demo: ''
     },
     {
       title: 'Guidini',
-      description: '2nd Prize winning project at Hackathon IA & Villes Résilientes 2030. A digital companion for authentic tourism experiences locally in Morocco, supporting World Cup 2030 initiatives.',
+      description: t('projects.items.guidini.description'),
       tags: ['React', 'Innovation', 'Hackathon'],
       github: 'https://github.com/yassiramrani',
       demo: ''
     },
     {
       title: 'Wijha',
-      description: 'Intelligent aid platform for travel organization. Full stack academic project featuring API integrations for hotels and automated visa condition verification.',
+      description: t('projects.items.wijha.description'),
       tags: ['Laravel', 'Tailwind CSS', 'MySQL', 'JavaScript'],
       github: 'https://github.com/yassiramrani',
       demo: ''
     },
     {
       title: 'infra_guard_part1',
-      description: 'An infrastructure and security monitoring web interface prototype for system oversight.',
+      description: t('projects.items.infra_guard_part1.description'),
       tags: ['HTML', 'CSS', 'Security'],
       github: 'https://github.com/yassiramrani/infra_guard_part1',
       demo: ''
     },
     {
       title: 'taskmanager-web',
-      description: 'A comprehensive task manager web application designed to help users organize their daily schedules and activities efficiently.',
+      description: t('projects.items.taskmanager.description'),
       tags: ['HTML', 'Web Development'],
       github: 'https://github.com/yassiramrani/taskmanager-web',
       demo: ''
@@ -77,7 +80,7 @@ const Projects = ({ id }: ProjectsProps) => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">
-            Featured <span className="accent">Projects</span>
+            {t('projects.title')} <span className="accent">{t('projects.subtitle')}</span>
           </h2>
           <div className="section-line"></div>
         </div>

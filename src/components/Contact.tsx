@@ -1,4 +1,5 @@
 import { FiMail, FiGithub, FiLinkedin, FiMapPin } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 interface ContactProps {
@@ -6,25 +7,25 @@ interface ContactProps {
 }
 
 const Contact = ({ id }: ContactProps) => {
+  const { t } = useTranslation();
+
   return (
     <section id={id} className="contact section">
       <div className="container">
         <div className="section-header center">
           <h2 className="section-title">
-            Get In <span className="accent">Touch</span>
+            {t('contact.title')} <span className="accent">{t('contact.subtitle')}</span>
           </h2>
           <div className="section-line"></div>
         </div>
 
         <div className="contact-content">
           <p className="contact-desc">
-            I'm currently looking for new opportunities and collaborations. Whether you 
-            have a question, a project idea, or just want to say hi, I'll try my best 
-            to get back to you!
+            {t('contact.description')}
           </p>
 
           <a href="mailto:amraniyassir04@gmail.com" className="btn btn-primary contact-btn">
-            Say Hello
+            {t('contact.button')}
           </a>
 
           <div className="contact-info">

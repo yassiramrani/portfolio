@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "roadmap": "Roadmap",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Software Engineer",
+    "description": "I'm a 4th-year engineering student passionate about building scalable, user-centric web applications and exploring innovative solutions in cloud and AI technologies.",
+    "cta": "View My Work"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Me",
+    "lead": "Hello! I'm Yassir, a 4th-year engineering student with a relentless drive for understanding how things work beneath the surface.",
+    "p1": "My journey into software engineering began with a fascination for problem-solving and logic. Fast-forward to today, I've had the privilege of building software for hackathons, contributing to open-source projects, and developing solutions ranging from voice cloning APIs to specialized dashboards.",
+    "p2": "I thrive in environments where I can leverage my academic foundation in engineering to tackle real-world software architecture challenges. Whether it's optimizing a backend service or crafting a pixel-perfect UI, I approach every task with a commitment to excellence.",
+    "skills": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Building responsive, accessible, and highly interactive user interfaces using React, Vue, and modern CSS architectures."
+      },
+      "backend": {
+        "title": "Backend Engineering",
+        "description": "Designing robust APIs and microservices with deep focus on performance, security, and scalable database schemas."
+      },
+      "cloud": {
+        "title": "Cloud & Infrastructure",
+        "description": "Deploying and orchestrating resilient cloud infrastructures and implementing CI/CD pipelines."
+      }
+    },
+    "certifications": {
+      "title": "Licenses &",
+      "subtitle": "Certifications"
+    }
+  },
+  "projects": {
+    "title": "Featured",
+    "subtitle": "Projects",
+    "items": {
+      "voicelegacy": {
+        "description": "A comprehensive voice cloning application allowing users to synthesize speech using AI. Built backend with FastAPI and deployed to Hugging Face Spaces, with a React frontend hosted on Vercel."
+      },
+      "diablife": {
+        "description": "An innovative healthcare dashboard designed for a hackathon. Integrated complex machine learning models into a user-friendly React interface with a robust reporting system."
+      },
+      "mhealth": {
+        "description": "A mobile health (mHealth) backend and tracking application focused on recording and reporting user health metrics."
+      },
+      "petyplant": {
+        "description": "1st Place winning project at Hackathon Vert. An intelligent automatic watering system combined with a web platform and AI to analyze and optimize plant needs."
+      },
+      "happlant": {
+        "description": "2nd Place winning project at EMSI Innovation Competition. A plant surveillance and automated irrigation system featuring an AI chatbot for personalized botanical advice."
+      },
+      "guidini": {
+        "description": "2nd Prize winning project at Hackathon IA & Villes Résilientes 2030. A digital companion for authentic tourism experiences locally in Morocco, supporting World Cup 2030 initiatives."
+      },
+      "wijha": {
+        "description": "Intelligent aid platform for travel organization. Full stack academic project featuring API integrations for hotels and automated visa condition verification."
+      },
+      "infra_guard_part1": {
+        "description": "An infrastructure and security monitoring web interface prototype for system oversight."
+      },
+      "taskmanager": {
+        "description": "A comprehensive task manager web application designed to help users organize their daily schedules and activities efficiently."
+      }
+    }
+  },
+  "roadmap": {
+    "title": "Career",
+    "subtitle": "Roadmap",
+    "items": {
+      "yazaki": {
+        "title": "Software Engineer Intern",
+        "company": "Yazaki Morocco (Hybrid)",
+        "description": "Summer internship focused on Software Infrastructure and Software Design in Tangier."
+      },
+      "lear": {
+        "title": "Software Engineer Intern",
+        "company": "Lear Corporation (On-site)",
+        "description": "Summer internship focused on Preventive Maintenance and System Repair."
+      },
+      "merge": {
+        "title": "Honorary Participation Award",
+        "company": "The Merge Hackathon 2026",
+        "description": "Selected among top 20 projects globally for \"VoiceLegacy\", an AI-powered voice preservation platform built with FastAPI, React, and ElevenLabs API."
+      },
+      "guidini": {
+        "title": "2nd Prize Winner",
+        "company": "Hackathon \"IA & Villes Résilientes 2030\" (LSInnovXTech)",
+        "description": "Won 2nd place with \"Guidini\", a digital companion offering authentic tourism experiences and local employment opportunities for World Cup 2030."
+      },
+      "petyplant": {
+        "title": "1st Place Winner - Hackathon Vert",
+        "company": "EMSI Tanger & Es.Maroc.Org",
+        "description": "Led \"Team Thinkera\" to victory with \"PetyPlant\", an intelligent automatic watering system and AI-driven plant community platform."
+      },
+      "happlant": {
+        "title": "2nd Place Winner - Innovation Competition",
+        "company": "EMSI Tanger",
+        "description": "Awarded for \"HapPlant\", a plant surveillance and automated irrigation system integrating an AI chatbot for personalized advice."
+      },
+      "cyber": {
+        "title": "Cybersecurity Workshop Animator",
+        "company": "InnovXtech Club",
+        "description": "Organized and co-animated workshops on Reverse Engineering, Pentesting, and Cryptography at EMSI and Lycée Technique Moulay Youssef."
+      },
+      "president": {
+        "title": "President / Engineering Student",
+        "company": "InnovXtech Club (EMSI Tanger)",
+        "description": "Studying Software Engineering while serving as President of InnovXtech Club since 2026. Delivered \"Wijha\" (intelligent travel organization platform using Laravel/Tailwind) as an academic project."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In",
+    "subtitle": "Touch",
+    "description": "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "button": "Say Hello"
+  }
+}

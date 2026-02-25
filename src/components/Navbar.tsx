@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiGlobe } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
 interface NavbarProps {
@@ -7,8 +8,10 @@ interface NavbarProps {
 }
 
 const Navbar = ({ activeSection }: NavbarProps) => {
+  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,12 +22,17 @@ const Navbar = ({ activeSection }: NavbarProps) => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Roadmap', href: '#roadmap' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.roadmap'), href: '#roadmap' },
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setIsLangMenuOpen(false);
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -47,6 +55,25 @@ const Navbar = ({ activeSection }: NavbarProps) => {
               {link.name}
             </a>
           ))}
+          
+          {/* Language Switcher */}
+          <div className="lang-switcher">
+            <button 
+              className="lang-btn" 
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              aria-label="Change Language"
+            >
+              <FiGlobe size={20} />
+              <span>{i18n.language.toUpperCase()}</span>
+            </button>
+            {isLangMenuOpen && (
+              <div className="lang-menu">
+                <button onClick={() => changeLanguage('en')}>English</button>
+                <button onClick={() => changeLanguage('fr')}>Français</button>
+                <button onClick={() => changeLanguage('ar')}>العربية</button>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -67,6 +94,11 @@ const Navbar = ({ activeSection }: NavbarProps) => {
             {link.name}
           </a>
         ))}
+        <div className="mobile-lang-options">
+          <button className={i18n.language === 'en' ? 'active' : ''} onClick={() => changeLanguage('en')}>EN</button>
+          <button className={i18n.language === 'fr' ? 'active' : ''} onClick={() => changeLanguage('fr')}>FR</button>
+          <button className={i18n.language === 'ar' ? 'active' : ''} onClick={() => changeLanguage('ar')}>AR</button>
+        </div>
       </div>
     </nav>
   );

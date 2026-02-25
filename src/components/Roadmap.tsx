@@ -1,4 +1,5 @@
 import { FiAward, FiStar, FiBriefcase, FiShield } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './Roadmap.css';
 
 interface RoadmapProps {
@@ -6,61 +7,63 @@ interface RoadmapProps {
 }
 
 const Roadmap = ({ id }: RoadmapProps) => {
+  const { t } = useTranslation();
+
   const roadmapItems = [
     {
       year: 'Jul 2025 - Aug 2025',
-      title: 'Software Engineer Intern',
-      company: 'Yazaki Morocco (Hybrid)',
-      description: 'Summer internship focused on Software Infrastructure and Software Design in Tangier.',
+      title: t('roadmap.items.yazaki.title'),
+      company: t('roadmap.items.yazaki.company'),
+      description: t('roadmap.items.yazaki.description'),
       icon: <FiBriefcase size={24} />
     },
     {
       year: 'Jul 2024 - Aug 2024',
-      title: 'Software Engineer Intern',
-      company: 'Lear Corporation (On-site)',
-      description: 'Summer internship focused on Preventive Maintenance and System Repair.',
+      title: t('roadmap.items.lear.title'),
+      company: t('roadmap.items.lear.company'),
+      description: t('roadmap.items.lear.description'),
       icon: <FiBriefcase size={24} />
     },
     {
       year: '2026',
-      title: 'Honorary Participation Award',
-      company: 'The Merge Hackathon 2026',
-      description: 'Selected among top 20 projects globally for "VoiceLegacy", an AI-powered voice preservation platform built with FastAPI, React, and ElevenLabs API.',
+      title: t('roadmap.items.merge.title'),
+      company: t('roadmap.items.merge.company'),
+      description: t('roadmap.items.merge.description'),
       icon: <FiAward size={24} />
     },
     {
       year: 'Recent',
-      title: '2nd Prize Winner',
-      company: 'Hackathon "IA & Villes Résilientes 2030" (LSInnovXTech)',
-      description: 'Won 2nd place with "Guidini", a digital companion offering authentic tourism experiences and local employment opportunities for World Cup 2030.',
+      title: t('roadmap.items.guidini.title'),
+      company: t('roadmap.items.guidini.company'),
+      description: t('roadmap.items.guidini.description'),
       icon: <FiAward size={24} />
     },
     {
       year: 'Dec 2024',
-      title: '1st Place Winner - Hackathon Vert',
-      company: 'EMSI Tanger & Es.Maroc.Org',
-      description: 'Led "Team Thinkera" to victory with "PetyPlant", an intelligent automatic watering system and AI-driven plant community platform.',
+      title: t('roadmap.items.petyplant.title'),
+      company: t('roadmap.items.petyplant.company'),
+      description: t('roadmap.items.petyplant.description'),
       icon: <FiAward size={24} />
     },
     {
       year: 'Jul 2024',
-      title: '2nd Place Winner - Innovation Competition',
-      company: 'EMSI Tanger',
-      description: 'Awarded for "HapPlant", a plant surveillance and automated irrigation system integrating an AI chatbot for personalized advice.',
+      title: t('roadmap.items.happlant.title'),
+      company: t('roadmap.items.happlant.company'),
+      description: t('roadmap.items.happlant.description'),
       icon: <FiAward size={24} />
     },
     {
       year: '2024',
-      title: 'Cybersecurity Workshop Animator',
-      company: 'InnovXtech Club',
-      description: 'Organized and co-animated workshops on Reverse Engineering, Pentesting, and Cryptography at EMSI and Lycée Technique Moulay Youssef.',
+      title: t('roadmap.items.cyber.title'),
+      company: t('roadmap.items.cyber.company'),
+      description: t('roadmap.items.cyber.description'),
       icon: <FiShield size={24} />
     },
     {
       year: '2026 - Present',
-      title: 'President / Engineering Student',
-      company: 'InnovXtech Club (EMSI Tanger)',
-      description: 'Studying Software Engineering while serving as President of InnovXtech Club since 2026. Delivered "Wijha" (intelligent travel organization platform using Laravel/Tailwind) as an academic project.',
+      title: t('roadmap.items.president.title'),
+      company: t('roadmap.items.president.company'),
+      description: t('roadmap.items.president.description'),
       icon: <FiStar size={24} />
     }
   ];
@@ -70,7 +73,7 @@ const Roadmap = ({ id }: RoadmapProps) => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">
-            Career <span className="accent">Roadmap</span>
+            {t('roadmap.title')} <span className="accent">{t('roadmap.subtitle')}</span>
           </h2>
           <div className="section-line"></div>
         </div>

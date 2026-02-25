@@ -1,4 +1,5 @@
 import { FiCode, FiCpu, FiCloudLightning, FiAward } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './About.css';
 
 interface AboutProps {
@@ -6,23 +7,25 @@ interface AboutProps {
 }
 
 const About = ({ id }: AboutProps) => {
+  const { t } = useTranslation();
+
   const skills = [
     {
-      title: 'Frontend Development',
+      title: t('about.skills.frontend.title'),
       icon: <FiCode size={32} />,
-      description: 'Building responsive, accessible, and highly interactive user interfaces using React, Vue, and modern CSS architectures.',
+      description: t('about.skills.frontend.description'),
       tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
     },
     {
-      title: 'Backend Engineering',
+      title: t('about.skills.backend.title'),
       icon: <FiCpu size={32} />,
-      description: 'Designing robust APIs and microservices with deep focus on performance, security, and scalable database schemas.',
+      description: t('about.skills.backend.description'),
       tags: ['Node.js', 'Python', 'FastAPI', 'PostgreSQL']
     },
     {
-      title: 'Cloud & Infrastructure',
+      title: t('about.skills.cloud.title'),
       icon: <FiCloudLightning size={32} />,
-      description: 'Deploying and orchestrating resilient cloud infrastructures and implementing CI/CD pipelines.',
+      description: t('about.skills.cloud.description'),
       tags: ['AWS', 'Docker', 'Supabase', 'Vercel']
     }
   ];
@@ -32,7 +35,7 @@ const About = ({ id }: AboutProps) => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">
-            About <span className="accent">Me</span>
+            {t('about.title')} <span className="accent">{t('about.subtitle')}</span>
           </h2>
           <div className="section-line"></div>
         </div>
@@ -40,21 +43,13 @@ const About = ({ id }: AboutProps) => {
         <div className="about-content">
           <div className="about-text">
             <p className="lead">
-              Hello! I'm Yassir, a 4th-year engineering student with a relentless
-              drive for understanding how things work beneath the surface.
+              {t('about.lead')}
             </p>
             <p>
-              My journey into software engineering began with a fascination for 
-              problem-solving and logic. Fast-forward to today, I've had the
-              privilege of building software for hackathons, contributing to
-              open-source projects, and developing solutions ranging from
-              voice cloning APIs to specialized dashboards.
+              {t('about.p1')}
             </p>
             <p>
-              I thrive in environments where I can leverage my academic foundation
-              in engineering to tackle real-world software architecture challenges.
-              Whether it's optimizing a backend service or crafting a pixel-perfect
-              UI, I approach every task with a commitment to excellence.
+              {t('about.p2')}
             </p>
           </div>
 
@@ -75,7 +70,7 @@ const About = ({ id }: AboutProps) => {
 
           <div className="certifications-section">
             <h3 className="section-title" style={{ fontSize: '1.8rem', marginBottom: '2rem' }}>
-              Licenses & <span className="accent">Certifications</span>
+              {t('about.certifications.title')} <span className="accent">{t('about.certifications.subtitle')}</span>
             </h3>
             <div className="cert-grid">
               {[
