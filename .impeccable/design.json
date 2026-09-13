@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-12T20:02:36.6926335+01:00",
+  "title": "Design System: Yassir Amrani Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#f5f4f0", "tonalRamp": ["oklch(15% 0.005 95)", "oklch(26% 0.005 95)", "oklch(38% 0.005 95)", "oklch(50% 0.005 95)", "oklch(63% 0.005 95)", "oklch(75% 0.005 95)", "oklch(87% 0.005 95)", "oklch(96% 0.005 95)"] },
+      "paper-tint": { "role": "neutral", "displayName": "Minted Paper", "canonical": "#ebf0eb", "tonalRamp": ["oklch(15% 0.01 145)", "oklch(26% 0.01 145)", "oklch(38% 0.01 145)", "oklch(50% 0.01 145)", "oklch(63% 0.01 145)", "oklch(75% 0.01 145)", "oklch(87% 0.01 145)", "oklch(96% 0.01 145)"] },
+      "ink": { "role": "neutral", "displayName": "Carbon Ink", "canonical": "#17191a", "tonalRamp": ["oklch(15% 0.005 245)", "oklch(26% 0.005 245)", "oklch(38% 0.005 245)", "oklch(50% 0.005 245)", "oklch(63% 0.005 245)", "oklch(75% 0.005 245)", "oklch(87% 0.005 245)", "oklch(96% 0.005 245)"] },
+      "muted": { "role": "neutral", "displayName": "Measured Gray", "canonical": "#5e6463", "tonalRamp": ["oklch(15% 0.008 245)", "oklch(26% 0.008 245)", "oklch(38% 0.008 245)", "oklch(50% 0.008 245)", "oklch(63% 0.008 245)", "oklch(75% 0.008 245)", "oklch(87% 0.008 245)", "oklch(96% 0.008 245)"] },
+      "line": { "role": "neutral", "displayName": "Ledger Rule", "canonical": "#c9c9c3", "tonalRamp": ["oklch(15% 0.006 105)", "oklch(26% 0.006 105)", "oklch(38% 0.006 105)", "oklch(50% 0.006 105)", "oklch(63% 0.006 105)", "oklch(75% 0.006 105)", "oklch(87% 0.006 105)", "oklch(96% 0.006 105)"] },
+      "soft-line": { "role": "neutral", "displayName": "Soft Ledger Rule", "canonical": "#dcddd8", "tonalRamp": ["oklch(15% 0.005 115)", "oklch(26% 0.005 115)", "oklch(38% 0.005 115)", "oklch(50% 0.005 115)", "oklch(63% 0.005 115)", "oklch(75% 0.005 115)", "oklch(87% 0.005 115)", "oklch(96% 0.005 115)"] },
+      "accent": { "role": "primary", "displayName": "Dossier Lavender", "canonical": "#565b94", "tonalRamp": ["oklch(15% 0.07 280)", "oklch(26% 0.07 280)", "oklch(38% 0.07 280)", "oklch(50% 0.07 280)", "oklch(63% 0.07 280)", "oklch(75% 0.07 280)", "oklch(87% 0.07 280)", "oklch(96% 0.07 280)"] },
+      "accent-soft": { "role": "secondary", "displayName": "Lavender Plate", "canonical": "#dedff0", "tonalRamp": ["oklch(15% 0.035 280)", "oklch(26% 0.035 280)", "oklch(38% 0.035 280)", "oklch(50% 0.035 280)", "oklch(63% 0.035 280)", "oklch(75% 0.035 280)", "oklch(87% 0.035 280)", "oklch(96% 0.035 280)"] },
+      "focus": { "role": "tertiary", "displayName": "Focus Green", "canonical": "#174c43", "tonalRamp": ["oklch(15% 0.04 170)", "oklch(26% 0.04 170)", "oklch(38% 0.04 170)", "oklch(50% 0.04 170)", "oklch(63% 0.04 170)", "oklch(75% 0.04 170)", "oklch(87% 0.04 170)", "oklch(96% 0.04 170)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Hero Display", "purpose": "Hero name and only the dominant first-viewport hierarchy." },
+      "headline": { "displayName": "Section Headline", "purpose": "Primary section wayfinding." },
+      "body": { "displayName": "Reading Text", "purpose": "Summaries, evidence, and contact copy." },
+      "label": { "displayName": "Technical Metadata", "purpose": "Dates, categories, indices, tags, and compact annotations." }
+    },
+    "shadows": [
+      { "name": "language-menu-overlay", "value": "0 12px 24px rgba(23, 25, 26, .18)", "purpose": "Separate the temporary language menu from the flat document." }
+    ],
+    "motion": [
+      { "name": "standard-state", "value": "0.2s ease", "purpose": "Skip-link position and ordinary state feedback." },
+      { "name": "reduced-motion", "value": "0.01ms !important", "purpose": "Disables animation and smooth scrolling when the user requests reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "760px", "purpose": "Switches the dossier to its single-column mobile composition." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-emphasis hero action for selected work or a supplied CV.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#work\">VIEW SELECTED WORK <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M9 7h8v8\"/></svg></a>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; gap:.7rem; min-height:3.1rem; padding:0 1.15rem; background:#17191a; color:#fff; font:800 .78rem/1 Manrope,Arial,sans-serif; text-decoration:none; transition:background .2s ease; } .ds-btn-primary svg { width:1rem; height:1rem; fill:none; stroke:currentColor; stroke-width:2; } .ds-btn-primary:hover { background:#565b94; } .ds-btn-primary:focus-visible { outline:3px solid #174c43; outline-offset:4px; }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined secondary action for a downloadable CV.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">DOWNLOAD CV</a>",
+      "css": ".ds-btn-secondary { display:inline-flex; align-items:center; min-height:3.1rem; padding:0 1.15rem; border:1px solid #17191a; color:#17191a; font:800 .78rem/1 Manrope,Arial,sans-serif; text-decoration:none; transition:background .2s ease,color .2s ease; } .ds-btn-secondary:hover { background:#17191a; color:#fff; } .ds-btn-secondary:focus-visible { outline:3px solid #174c43; outline-offset:4px; }"
+    },
+    {
+      "name": "Technology Tag",
+      "kind": "chip",
+      "description": "A compact, static stack label used as evidence in a project record.",
+      "html": "<span class=\"ds-tech-tag\">FASTAPI</span>",
+      "css": ".ds-tech-tag { display:inline-flex; padding:.4rem .55rem; border:1px solid #c9c9c3; color:#17191a; font:500 .63rem/1 'DM Mono',monospace; letter-spacing:.02em; }"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "description": "Sticky document masthead with compact, underlined navigation states.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\">YASSIR <b>AMRANI</b></a><a class=\"ds-nav-link ds-active\" href=\"#work\">WORK</a><a class=\"ds-nav-link\" href=\"#contact\">CONTACT</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:1.2rem; min-height:4.5rem; padding:0 1rem; background:#f5f4f0; border-bottom:1px solid #c9c9c3; } .ds-wordmark { margin-right:auto; color:#17191a; font:800 .8rem/1 Manrope,Arial,sans-serif; letter-spacing:.06em; text-decoration:none; } .ds-wordmark b { color:#565b94; font:500 .67rem/1 'DM Mono',monospace; letter-spacing:.12em; } .ds-nav-link { padding:.35rem 0; border-bottom:1px solid transparent; color:#5e6463; font:700 .76rem/1 Manrope,Arial,sans-serif; text-decoration:none; } .ds-nav-link:hover,.ds-nav-link.ds-active { color:#17191a; border-color:#17191a; } .ds-nav a:focus-visible { outline:3px solid #174c43; outline-offset:4px; }"
+    },
+    {
+      "name": "Featured Project Ledger",
+      "kind": "card",
+      "description": "A ruled evidence cell for a selected project, with index, summary, proof, stack, and action.",
+      "html": "<article class=\"ds-project\"><span class=\"ds-index\">01</span><div><h3>VOICELEGACY</h3><p>AI-powered voice preservation platform.</p><dl><dt>OUTCOME</dt><dd>Top-20 global hackathon selection.</dd></dl><span class=\"ds-tech-tag\">REACT</span> <span class=\"ds-tech-tag\">FASTAPI</span></div><a href=\"#\">REPOSITORY ↗</a></article>",
+      "css": ".ds-project { display:flex; flex-direction:column; gap:1.7rem; min-height:29rem; padding:2rem; background:#f5f4f0; color:#17191a; border:1px solid #c9c9c3; } .ds-index,.ds-project dt { color:#565b94; font:500 .66rem/1.4 'DM Mono',monospace; letter-spacing:.1em; } .ds-project h3 { margin:.8rem 0 .65rem; font:700 2rem/.98 Manrope,Arial,sans-serif; letter-spacing:-.045em; } .ds-project p,.ds-project dd { color:#5e6463; font:400 .9rem/1.65 Manrope,Arial,sans-serif; } .ds-project dl { margin:1.25rem 0; } .ds-project dd { margin:.55rem 0 0; } .ds-project > a { margin-top:auto; width:max-content; padding-bottom:.2rem; border-bottom:1px solid #17191a; color:#17191a; font:800 .72rem/1 Manrope,Arial,sans-serif; text-decoration:none; } .ds-project > a:hover { color:#565b94; border-color:#565b94; } .ds-project > a:focus-visible { outline:3px solid #174c43; outline-offset:4px; }"
+    },
+    {
+      "name": "Experience Ledger Row",
+      "kind": "custom",
+      "description": "Dark reverse-chronological record for engineering experience, recognition, and leadership.",
+      "html": "<article class=\"ds-ledger-row\"><time>2026</time><div><p class=\"ds-kind\">RECOGNITION</p><h3>HONORARY PARTICIPATION AWARD</h3><p>VoiceLegacy selected among the top 20 projects globally.</p></div></article>",
+      "css": ".ds-ledger-row { display:grid; grid-template-columns:minmax(8rem,.6fr) 1.4fr; gap:2rem; padding:1.6rem 0; background:#17191a; border-bottom:1px solid #4a4c4c; color:#f9faf7; } .ds-ledger-row time,.ds-kind { margin:0; color:#c7c9fc; font:500 .7rem/1.5 'DM Mono',monospace; letter-spacing:.08em; } .ds-ledger-row h3 { margin:.45rem 0 .5rem; font:700 1.12rem/1.2 Manrope,Arial,sans-serif; } .ds-ledger-row div > p:last-child { margin:0; color:#c6cac6; font:400 .84rem/1.62 Manrope,Arial,sans-serif; } @media (max-width:760px) { .ds-ledger-row { grid-template-columns:1fr; gap:.7rem; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Technical Dossier",
+    "overview": "This is a paper-and-ink editorial portfolio built for quick professional evaluation. It uses generous white space, hard rules, dense proof blocks, and calm photography to let verified engineering work read as evidence instead of marketing. The visual direction is grounded in the composition reference at `.impeccable/mocks/technical-editorial-direction.png`: a ruled editorial canvas, asymmetrical hero, image-bearing work record, and ledger-like supporting sections.\n\nThe interface stays deliberately flat. Near-black type carries authority; muted lavender appears only for availability, indexes, and record metadata. It avoids the discarded glass-card visual language: project work is organized as one bordered composition, not a collection of floating panels.",
+    "keyCharacteristics": ["Paper-toned backgrounds, ink-black structure, and thin gray rules.", "Oversized Manrope headlines paired with compact DM Mono metadata.", "Evidence-first layouts: selected work, chronological record, concise supporting proof.", "Quiet interaction feedback and accessible, multilingual navigation."],
+    "rules": [
+      { "name": "The Single-Signal Rule", "body": "Use the lavender accent for metadata, selection, and interaction feedback; ink remains the dominant action and hierarchy color.", "section": "colors" },
+      { "name": "The Evidence Label Rule", "body": "Use mono uppercase labels only to identify proof, time, technology, or navigation state; never use them for body copy.", "section": "typography" },
+      { "name": "The Printed-Page Rule", "body": "Do not add shadows, floating containers, or frosted glass to ordinary content; divide and group information with rule lines and tonal grounds.", "section": "elevation" }
+    ],
+    "dos": ["Do preserve the paper/ink/rule composition and use the visual reference `.impeccable/mocks/technical-editorial-direction.png` when extending this surface.", "Do make the project outcome and contribution as easy to find as the project title.", "Do preserve keyboard focus, the skip link, Escape/outside-close menu behavior, and the reduced-motion override.", "Do keep Arabic layouts RTL-aware while leaving Latin wordmark and caption treatment legible."],
+    "donts": ["Don't reintroduce glassmorphism, soft floating cards, gradient-filled panels, or decorative shadows.", "Don't use lavender as a dominant page field or replace the Carbon Ink primary action state.", "Don't turn archive work into equal-weight feature cards; featured work carries deliberate asymmetry.", "Don't hide interaction state in color alone or remove visible focus treatment."]
+  }
+}

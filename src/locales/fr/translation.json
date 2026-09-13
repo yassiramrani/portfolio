@@ -1,124 +1,38 @@
 {
-  "nav": {
-    "about": "À propos",
-    "projects": "Projets",
-    "roadmap": "Parcours",
-    "contact": "Contact"
+  "nav": { "home": "Accueil", "primary": "Navigation principale", "work": "Projets", "experience": "Parcours", "evidence": "Expertise", "cv": "CV", "contact": "Contact", "resume": "Télécharger le CV", "backToTop": "Haut de page", "openMenu": "Ouvrir le menu", "closeMenu": "Fermer le menu", "skip": "Aller au contenu" },
+  "languages": { "en": "English", "fr": "Français", "ar": "العربية" },
+  "hero": { "availability": "Disponible pour des opportunités en ingénierie full-stack", "role": "Ingénieur full-stack", "description": "Je crée des produits web centrés sur l’utilisateur, du frontend au backend, au cloud et aux workflows assistés par l’IA.", "workCta": "Voir une sélection de projets", "cvCta": "CV et parcours", "socialLabel": "Liens de contact et profils", "emailLabel": "Envoyer un e-mail à Yassir", "githubLabel": "Voir le GitHub de Yassir", "linkedinLabel": "Voir le LinkedIn de Yassir", "portraitAlt": "Portrait de Yassir Amrani", "portraitCaption": "Ingénierie logicielle · Tanger, Maroc" },
+  "work": { "title": "Projets sélectionnés", "intro": "Trois projets qui démontrent la réflexion produit, l’étendue technique et une reconnaissance au-delà du cadre académique.", "labels": { "contribution": "Contribution", "outcome": "Preuve" }, "repository": "Dépôt", "demo": "Projet en ligne", "techLabel": "Technologies utilisées dans {{project}}", "repositoryFor": "Ouvrir le dépôt {{project}}", "archiveTitle": "Archives des projets", "featured": { "voicelegacy": { "summary": "Une plateforme de préservation vocale propulsée par l’IA, avec interface React et service FastAPI.", "contribution": "Développement du frontend React et du backend FastAPI pour les workflows de synthèse vocale.", "outcome": "Sélectionné parmi les 20 meilleurs projets mondiaux au Merge Hackathon 2026.", "imageAlt": "Interface de l’application VoiceLegacy" }, "petyplant": { "summary": "Un système d’arrosage intelligent reliant des conseils IA pour les plantes à une plateforme web.", "contribution": "Contribution à un concept IoT et IA pour suivre et optimiser les besoins des plantes.", "outcome": "Premier prix au Hackathon Vert, EMSI Tanger et Es.Maroc.Org.", "imageAlt": "Système d’arrosage et plateforme web PetyPlant" }, "wijha": { "summary": "Une plateforme académique full-stack de planification de voyage avec intégrations hôtelières et conditions de visa.", "contribution": "Réalisation de l’application Laravel, Tailwind CSS, MySQL et JavaScript.", "outcome": "Projet réalisé dans le cadre des études d’ingénierie.", "imageAlt": "Application de planification de voyage Wijha" } }, "archive": { "diablife": "Tableau de bord santé", "mhealth": "Backend de métriques santé", "happlant": "Concept de suivi des plantes", "guidini": "Compagnon touristique", "infraGuard": "Prototype d’interface de sécurité", "taskManager": "Application web de gestion des tâches" } },
+  "experience": { "title": "Expérience et reconnaissance", "intro": "Un parcours antéchronologique d’expériences d’ingénierie, de distinctions et de leadership associatif.", "kinds": { "experience": "Expérience", "recognition": "Distinction", "leadership": "Leadership" }, "items": { "president": { "title": "Président / Étudiant ingénieur", "organization": "Club InnovXtech · EMSI Tanger", "description": "Présidence du club en parallèle des études d’ingénierie et de la réalisation de produits académiques." }, "merge": { "title": "Prix de participation d’honneur", "organization": "The Merge Hackathon 2026", "description": "VoiceLegacy a été sélectionné parmi les 20 meilleurs projets mondiaux." }, "yazaki": { "title": "Stagiaire ingénieur logiciel", "organization": "Yazaki Morocco · Hybride", "description": "Stage d’été centré sur l’infrastructure et la conception logicielle à Tanger." }, "guidini": { "title": "Deuxième prix", "organization": "Hackathon IA & Villes Résilientes 2030", "description": "Distinction pour Guidini, compagnon du tourisme local et de l’emploi." }, "petyplant": { "title": "Premier prix", "organization": "Hackathon Vert · EMSI Tanger", "description": "Direction de Team Thinkera avec un système d’arrosage intelligent et une plateforme communautaire IA." }, "lear": { "title": "Stagiaire ingénieur logiciel", "organization": "Lear Corporation · Sur site", "description": "Stage d’été axé sur la maintenance préventive et la réparation des systèmes." }, "happlant": { "title": "Deuxième prix", "organization": "Compétition Innovation EMSI", "description": "Distinction pour un système de surveillance et d’irrigation automatisée avec chatbot IA." }, "cyber": { "title": "Animateur d’ateliers cybersécurité", "organization": "Club InnovXtech", "description": "Organisation et coanimation d’ateliers sur le reverse engineering, le pentesting et la cryptographie." } } },
+  "evidence": { "title": "Preuves d’ingénierie", "intro": "Les domaines de pratique et les certifications choisies qui soutiennent les projets.", "strengthsTitle": "Domaines de pratique", "certificationsTitle": "Certifications sélectionnées", "strengths": { "frontend": { "title": "Systèmes frontend", "description": "React, TypeScript, interfaces responsives et interactions accessibles." }, "backend": { "title": "Services backend", "description": "Python, FastAPI, Node.js, conception d’API et PostgreSQL." }, "cloud": { "title": "Livraison et cloud", "description": "Docker, AWS, Supabase, Vercel et workflows de déploiement." } }, "certifications": { "python": { "title": "Using Python to Access Web Data", "issuer": "University of Michigan · 2025" }, "softwareDesign": { "title": "Software Design and Project Management", "issuer": "Hong Kong University of Science and Technology · 2025" }, "cpp": { "title": "Programmation orientée objet en C++", "issuer": "École Polytechnique Fédérale de Lausanne · 2025" }, "english": { "title": "EF SET English Certificate — C2 Proficient", "issuer": "EF SET · 2022" } } },
+  "cv": {
+    "title": "CV",
+    "intro": "Le document formel, repris du CV téléchargeable : profil, compétences clés, expérience, formation, certifications et langues.",
+    "documentLabel": "Curriculum vitae de Yassir Amrani",
+    "download": "Télécharger le PDF",
+    "downloadPending": "PDF non publié — utilisez Imprimer / Enregistrer en PDF",
+    "print": "Imprimer / Enregistrer en PDF",
+    "location": "Tanger, Maroc",
+    "role": "Élève ingénieur informatique et réseaux",
+    "profileTitle": "Profil",
+    "summary": "Étudiant en 2ème année d’ingénierie informatique et réseaux, passionné par le développement logiciel et l’intelligence artificielle. Je recherche un poste pour mettre en pratique mes compétences techniques tout en développant mon esprit d’équipe et mon sens de l’organisation.",
+    "skillsTitle": "Compétences clés",
+    "experienceTitle": "Expérience et engagement associatif",
+    "educationTitle": "Formation",
+    "awardsTitle": "Distinctions",
+    "certificationsTitle": "Certificats",
+    "languagesTitle": "Langues",
+    "softSkillsTitle": "Soft skills",
+    "footnote": "Le CV complet et à jour est téléchargeable en PDF en haut de cette section.",
+    "toolbox": { "backend": "Développement back-end", "frontend": "Développement front-end", "data": "Data & IA", "tools": "Bases de données & outils" },
+    "education": { "items": {
+      "engineering": { "title": "Ingénierie informatique & réseaux", "organization": "EMSI — Tanger", "period": "01/2024 — En cours" },
+      "prepa": { "title": "Classes préparatoires intégrées", "organization": "EMSI — Tanger", "period": "01/2022 — 01/2024" },
+      "bac": { "title": "Baccalauréat sciences physiques", "organization": "Lycée Abdlkhalek Torres", "period": "01/2021 — 01/2022" }
+    } },
+    "languages": { "arabic": "Arabe", "french": "Français", "english": "Anglais" },
+    "languageLevels": { "native": "Langue maternelle", "b2": "Intermédiaire supérieur (B2)", "c1": "Avancé (C1)" },
+    "softSkills": { "problemSolving": "Résolution de problèmes", "teamwork": "Travail en équipe", "adaptability": "Adaptabilité & apprentissage" }
   },
-  "hero": {
-    "greeting": "Bonjour, je suis",
-    "role": "Ingénieur Logiciel",
-    "description": "Je suis un étudiant-ingénieur en 4ème année, passionné par la création d'applications web évolutives et centrées sur l'utilisateur, et par l'exploration de solutions innovantes dans les technologies du cloud et de l'IA.",
-    "cta": "Voir mon travail"
-  },
-  "about": {
-    "title": "À",
-    "subtitle": "Propos",
-    "lead": "Bonjour ! Je suis Yassir, étudiant-ingénieur en 4ème année avec une volonté implacable de comprendre le fonctionnement des choses sous la surface.",
-    "p1": "Mon parcours en génie logiciel a commencé par une fascination pour la résolution de problèmes et la logique. Aujourd'hui, j'ai eu le privilège de créer des logiciels pour des hackathons, de contribuer à des projets open source et de développer des solutions allant des API de clonage vocal à des tableaux de bord spécialisés.",
-    "p2": "J'évolue dans des environnements où je peux mettre à profit mes bases académiques en ingénierie pour relever des défis réels d'architecture logicielle. Qu'il s'agisse d'optimiser un service backend ou de concevoir une interface utilisateur au pixel près, j'aborde chaque tâche avec un engagement envers l'excellence.",
-    "skills": {
-      "frontend": {
-        "title": "Développement Frontend",
-        "description": "Création d'interfaces utilisateur réactives, accessibles et hautement interactives avec React, Vue et des architectures CSS modernes."
-      },
-      "backend": {
-        "title": "Ingénierie Backend",
-        "description": "Conception d'API et de microservices robustes avec une attention particulière aux performances, à la sécurité et aux schémas de base de données évolutifs."
-      },
-      "cloud": {
-        "title": "Cloud et Infrastructure",
-        "description": "Déploiement et orchestration d'infrastructures cloud résilientes et mise en œuvre de pipelines CI/CD."
-      }
-    },
-    "certifications": {
-      "title": "Licences et",
-      "subtitle": "Certifications"
-    }
-  },
-  "projects": {
-    "title": "Projets",
-    "subtitle": "Phare",
-    "items": {
-      "voicelegacy": {
-        "description": "Une application complète de clonage vocal permettant aux utilisateurs de synthétiser la parole grâce à l'IA. Backend construit avec FastAPI et déployé sur Hugging Face Spaces, avec un frontend React hébergé sur Vercel."
-      },
-      "diablife": {
-        "description": "Un tableau de bord de santé innovant conçu pour un hackathon. Intégration de modèles d'apprentissage automatique complexes dans une interface React conviviale dotée d'un système de reporting robuste."
-      },
-      "mhealth": {
-        "description": "Un backend et une application de suivi en santé mobile (mHealth) axés sur l'enregistrement et les rapports des paramètres de santé des utilisateurs."
-      },
-      "petyplant": {
-        "description": "Projet gagnant du 1er prix au Hackathon Vert. Un système d'arrosage automatique intelligent combiné à une plateforme web et à l'IA pour analyser et optimiser les besoins des plantes."
-      },
-      "happlant": {
-        "description": "Projet gagnant du 2ème prix au concours d'innovation EMSI. Un système de surveillance des plantes et d'irrigation automatisée intégrant un chatbot IA pour des conseils botaniques personnalisés."
-      },
-      "guidini": {
-        "description": "Projet gagnant du 2ème prix au Hackathon IA & Villes Résilientes 2030. Un compagnon numérique pour des expériences touristiques authentiques localement au Maroc, soutenant les initiatives de la Coupe du Monde 2030."
-      },
-      "wijha": {
-        "description": "Plateforme d'aide intelligente pour l'organisation de voyages. Projet académique full-stack comprenant des intégrations API pour les hôtels et une vérification automatisée des conditions de visa."
-      },
-      "infra_guard_part1": {
-        "description": "Un prototype d'interface web de surveillance des infrastructures et de la sécurité pour le contrôle des systèmes."
-      },
-      "taskmanager": {
-        "description": "Une application web complète de gestion des tâches conçue pour aider les utilisateurs à organiser efficacement leurs emplois du temps et activités quotidiens."
-      }
-    }
-  },
-  "roadmap": {
-    "title": "Mon",
-    "subtitle": "Parcours",
-    "items": {
-      "yazaki": {
-        "title": "Stagiaire Ingénieur Logiciel",
-        "company": "Yazaki Morocco (Hybride)",
-        "description": "Stage d'été axé sur l'infrastructure logicielle et la conception logicielle à Tanger."
-      },
-      "lear": {
-        "title": "Stagiaire Ingénieur Logiciel",
-        "company": "Lear Corporation (Sur site)",
-        "description": "Stage d'été axé sur la maintenance préventive et la réparation des systèmes."
-      },
-      "merge": {
-        "title": "Prix de Participation Honorifique",
-        "company": "Le Merge Hackathon 2026",
-        "description": "Sélectionné parmi les 20 meilleurs projets mondiaux pour \"VoiceLegacy\", une plateforme de préservation vocale alimentée par l'IA, construite avec FastAPI, React et l'API ElevenLabs."
-      },
-      "guidini": {
-        "title": "Gagnant du 2e Prix",
-        "company": "Hackathon \"IA & Villes Résilientes 2030\" (LSInnovXTech)",
-        "description": "A remporté la 2e place avec \"Guidini\", un compagnon numérique offrant des expériences touristiques authentiques et des opportunités d'emploi local pour la Coupe du Monde 2030."
-      },
-      "petyplant": {
-        "title": "Gagnant de la 1ère place - Hackathon Vert",
-        "company": "EMSI Tanger & Es.Maroc.Org",
-        "description": "A mené la \"Team Thinkera\" à la victoire avec \"PetyPlant\", un système d'arrosage automatique intelligent et une plateforme communautaire pilotée par l'IA."
-      },
-      "happlant": {
-        "title": "Gagnant de la 2e place - Concours d'Innovation",
-        "company": "EMSI Tanger",
-        "description": "Récompensé pour \"HapPlant\", un système de surveillance des plantes et d'irrigation automatisée intégrant un chatbot IA pour des conseils personnalisés."
-      },
-      "cyber": {
-        "title": "Animateur d'Atelier de Cybersécurité",
-        "company": "Club InnovXtech",
-        "description": "Organisation et co-animation d'ateliers sur le Reverse Engineering, le Pentesting et la Cryptographie à l'EMSI et au Lycée Technique Moulay Youssef."
-      },
-      "president": {
-        "title": "Président / Étudiant Ingénieur",
-        "company": "Club InnovXtech (EMSI Tanger)",
-        "description": "Étudiant en génie logiciel tout en occupant le poste de président du club InnovXtech depuis 2026. A livré \"Wijha\" (plateforme d'organisation de voyages) en tant que projet académique."
-      }
-    }
-  },
-  "contact": {
-    "title": "Me",
-    "subtitle": "Contacter",
-    "description": "Je suis actuellement à la recherche de nouvelles opportunités. Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, je ferai de mon mieux pour vous répondre !",
-    "button": "Dire Bonjour"
-  }
+  "contact": { "title": "Construisons quelque chose d’utile.", "description": "Ouvert aux opportunités full-stack, aux échanges techniques et au travail produit collaboratif.", "email": "E-mail", "cv": "CV" }, "footer": "© {{year}} Yassir Amrani"
 }

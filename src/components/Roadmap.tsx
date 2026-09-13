@@ -1,96 +1,23 @@
-import { FiAward, FiStar, FiBriefcase, FiShield } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import './Roadmap.css';
+import { experienceItems } from '../data/portfolio';
 
-interface RoadmapProps {
-  id: string;
-}
-
-const Roadmap = ({ id }: RoadmapProps) => {
+const Roadmap = ({ id }: { id: string }) => {
   const { t } = useTranslation();
-
-  const roadmapItems = [
-    {
-      year: 'Jul 2025 - Aug 2025',
-      title: t('roadmap.items.yazaki.title'),
-      company: t('roadmap.items.yazaki.company'),
-      description: t('roadmap.items.yazaki.description'),
-      icon: <FiBriefcase size={24} />
-    },
-    {
-      year: 'Jul 2024 - Aug 2024',
-      title: t('roadmap.items.lear.title'),
-      company: t('roadmap.items.lear.company'),
-      description: t('roadmap.items.lear.description'),
-      icon: <FiBriefcase size={24} />
-    },
-    {
-      year: '2026',
-      title: t('roadmap.items.merge.title'),
-      company: t('roadmap.items.merge.company'),
-      description: t('roadmap.items.merge.description'),
-      icon: <FiAward size={24} />
-    },
-    {
-      year: 'Recent',
-      title: t('roadmap.items.guidini.title'),
-      company: t('roadmap.items.guidini.company'),
-      description: t('roadmap.items.guidini.description'),
-      icon: <FiAward size={24} />
-    },
-    {
-      year: 'Dec 2024',
-      title: t('roadmap.items.petyplant.title'),
-      company: t('roadmap.items.petyplant.company'),
-      description: t('roadmap.items.petyplant.description'),
-      icon: <FiAward size={24} />
-    },
-    {
-      year: 'Jul 2024',
-      title: t('roadmap.items.happlant.title'),
-      company: t('roadmap.items.happlant.company'),
-      description: t('roadmap.items.happlant.description'),
-      icon: <FiAward size={24} />
-    },
-    {
-      year: '2024',
-      title: t('roadmap.items.cyber.title'),
-      company: t('roadmap.items.cyber.company'),
-      description: t('roadmap.items.cyber.description'),
-      icon: <FiShield size={24} />
-    },
-    {
-      year: '2026 - Present',
-      title: t('roadmap.items.president.title'),
-      company: t('roadmap.items.president.company'),
-      description: t('roadmap.items.president.description'),
-      icon: <FiStar size={24} />
-    }
-  ];
-
   return (
-    <section id={id} className="roadmap section">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">
-            {t('roadmap.title')} <span className="accent">{t('roadmap.subtitle')}</span>
-          </h2>
-          <div className="section-line"></div>
-        </div>
-
-        <div className="roadmap-timeline">
-          {roadmapItems.map((item, index) => (
-            <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-              <div className="timeline-dot">{item.icon}</div>
-              <div className="timeline-content">
-                <span className="timeline-year">{item.year}</span>
-                <h3 className="timeline-title">{item.title}</h3>
-                <span className="timeline-company">{item.company}</span>
-                <p className="timeline-desc">{item.description}</p>
+    <section id={id} className="section-shell experience-section" aria-labelledby="experience-title">
+      <div className="layout-grid">
+        <header className="section-intro"><h2 id="experience-title">{t('experience.title')}</h2><p>{t('experience.intro')}</p></header>
+        <ol className="experience-ledger">
+          {experienceItems.map((item, index) => (
+            <li key={item.id}>
+              <div className="ledger-meta">
+                <span className="record-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <time>{item.period}</time>
               </div>
-            </div>
+              <div><p className="record-kind">{t(`experience.kinds.${item.kind}`)}</p><h3>{t(`experience.items.${item.id}.title`)}</h3><p className="record-organization">{t(`experience.items.${item.id}.organization`)}</p><p>{t(`experience.items.${item.id}.description`)}</p></div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

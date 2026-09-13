@@ -1,106 +1,68 @@
-import { useState, useEffect } from 'react';
-import { FiMenu, FiX, FiGlobe } from 'react-icons/fi';
+import { useEffect, useRef, useState } from 'react';
+import { FiFileText, FiGlobe, FiMenu, FiX } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import './Navbar.css';
+import { profile } from '../data/portfolio';
+import useResumeAvailability from '../hooks/useResumeAvailability';
 
-interface NavbarProps {
-  activeSection: string;
-}
-
-const Navbar = ({ activeSection }: NavbarProps) => {
+const Navbar = ({ activeSection }: { activeSection: string }) => {
   const { t, i18n } = useTranslation();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [languagesOpen, setLanguagesOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const languageRef = useRef<HTMLDivElement>(null);
+  const hasResume = useResumeAvailability();
+  const links = ['work', 'experience', 'evidence', 'cv', 'contact'] as const;
+  const language = i18n.resolvedLanguage ?? i18n.language;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { setMenuOpen(false); setLanguagesOpen(false); }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const closeOutside = (event: PointerEvent) => {
+      if (!languageRef.current?.contains(event.target as Node)) setLanguagesOpen(false);
+    };
+    document.addEventListener('keydown', closeOnEscape);
+    document.addEventListener('pointerdown', closeOutside);
+    return () => { document.removeEventListener('keydown', closeOnEscape); document.removeEventListener('pointerdown', closeOutside); };
   }, []);
 
-  const navLinks = [
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.roadmap'), href: '#roadmap' },
-    { name: t('nav.projects'), href: '#projects' },
-    { name: t('nav.contact'), href: '#contact' },
-  ];
+  useEffect(() => {
+    let frame = 0;
+    const updateProgress = () => {
+      frame = 0;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0);
+    };
+    const onScroll = () => { if (!frame) frame = window.requestAnimationFrame(updateProgress); };
+    updateProgress();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    setIsLangMenuOpen(false);
-    setIsMobileMenuOpen(false);
-  };
-
+  const changeLanguage = (next: string) => { i18n.changeLanguage(next); setLanguagesOpen(false); setMenuOpen(false); };
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
-        <div className="navbar-logo">
-          <a href="#home">
-            <img src="/me.jpeg" alt="Yassir" className="navbar-profile-pic" />
-            <span>Yassir<span className="accent">.dev</span></span>
-          </a>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="navbar-links">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
-            >
-              {link.name}
-            </a>
-          ))}
-          
-          {/* Language Switcher */}
-          <div className="lang-switcher">
-            <button 
-              className="lang-btn" 
-              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-              aria-label="Change Language"
-            >
-              <FiGlobe size={20} />
-              <span>{i18n.language.toUpperCase()}</span>
-            </button>
-            {isLangMenuOpen && (
-              <div className="lang-menu">
-                <button onClick={() => changeLanguage('en')}>English</button>
-                <button onClick={() => changeLanguage('fr')}>Français</button>
-                <button onClick={() => changeLanguage('ar')}>العربية</button>
-              </div>
-            )}
+    <header className="site-header">
+      <div className="site-nav">
+        <a className="wordmark" href="#home" aria-label={t('nav.home')}><span>{profile.firstName}</span><b>{profile.surname}</b></a>
+        <nav id="site-menu" className={menuOpen ? 'nav-links open' : 'nav-links'} aria-label={t('nav.primary')}>
+          {links.map((link) => <a key={link} className={activeSection === link ? 'active' : ''} href={`#${link}`} onClick={() => setMenuOpen(false)}>{t(`nav.${link}`)}</a>)}
+          {hasResume && <a className="nav-resume" href={profile.resumeUrl} download={profile.resumeFileName} onClick={() => setMenuOpen(false)}><FiFileText aria-hidden="true" /> {t('nav.resume')}</a>}
+        </nav>
+        <div className="nav-actions">
+          <div className="language-picker" ref={languageRef}>
+            <button type="button" onClick={() => setLanguagesOpen((open) => !open)} aria-expanded={languagesOpen} aria-haspopup="menu" aria-controls="language-menu"><FiGlobe aria-hidden="true" /> {language.toUpperCase()}</button>
+            {languagesOpen && <div id="language-menu" role="menu">{['en', 'fr', 'ar'].map((item) => <button type="button" role="menuitem" className={language === item ? 'selected' : ''} onClick={() => changeLanguage(item)} key={item}>{t(`languages.${item}`)}</button>)}</div>}
           </div>
-        </div>
-
-        {/* Mobile Navigation Toggle */}
-        <div className="mobile-menu-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          <button className="menu-toggle" type="button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="site-menu" aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}>{menuOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}</button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        {navLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.href}
-            className={`mobile-nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {link.name}
-          </a>
-        ))}
-        <div className="mobile-lang-options">
-          <button className={i18n.language === 'en' ? 'active' : ''} onClick={() => changeLanguage('en')}>EN</button>
-          <button className={i18n.language === 'fr' ? 'active' : ''} onClick={() => changeLanguage('fr')}>FR</button>
-          <button className={i18n.language === 'ar' ? 'active' : ''} onClick={() => changeLanguage('ar')}>AR</button>
-        </div>
-      </div>
-    </nav>
+      <div className="scroll-progress" aria-hidden="true"><span style={{ transform: `scaleX(${progress})` }} /></div>
+    </header>
   );
 };
 

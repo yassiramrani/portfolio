@@ -1,59 +1,29 @@
-import { FiMail, FiGithub, FiLinkedin, FiMapPin } from 'react-icons/fi';
+import { FiArrowUp, FiArrowUpRight, FiFileText, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import './Contact.css';
+import { profile } from '../data/portfolio';
 
-interface ContactProps {
-  id: string;
-}
-
-const Contact = ({ id }: ContactProps) => {
+const Contact = ({ id }: { id: string }) => {
   const { t } = useTranslation();
-
   return (
-    <section id={id} className="contact section">
-      <div className="container">
-        <div className="section-header center">
-          <h2 className="section-title">
-            {t('contact.title')} <span className="accent">{t('contact.subtitle')}</span>
-          </h2>
-          <div className="section-line"></div>
+    <section id={id} className="section-shell contact-section" aria-labelledby="contact-title">
+      <div className="layout-grid contact-layout">
+        <div>
+          <h2 id="contact-title">{t('contact.title')}</h2>
+          <p>{t('contact.description')}</p>
         </div>
-
-        <div className="contact-content">
-          <p className="contact-desc">
-            {t('contact.description')}
-          </p>
-
-          <a href="mailto:amraniyassir04@gmail.com" className="btn btn-primary contact-btn">
-            {t('contact.button')}
-          </a>
-
-          <div className="contact-info">
-            <div className="info-item">
-              <FiMail className="info-icon" />
-              <span>amraniyassir04@gmail.com</span>
-            </div>
-            <div className="info-item">
-              <FiMapPin className="info-icon" />
-              <span>Available Worldwide (Remote)</span>
-            </div>
-          </div>
-
-          <div className="footer-socials">
-            <a href="https://github.com/yassiramrani" target="_blank" rel="noopener noreferrer" aria-label="Github">
-              <FiGithub size={20} />
-            </a>
-            <a href="https://www.linkedin.com/in/yaamrani/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FiLinkedin size={20} />
-            </a>
+        <div className="contact-links">
+          <a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<FiArrowUpRight aria-hidden="true" /></a>
+          <div>
+            <a href={profile.github} target="_blank" rel="noreferrer"><FiGithub aria-hidden="true" /> GitHub</a>
+            <a href={profile.linkedin} target="_blank" rel="noreferrer"><FiLinkedin aria-hidden="true" /> LinkedIn</a>
+            <a href="#cv"><FiFileText aria-hidden="true" /> {t('contact.cv')}</a>
+            <a href={`mailto:${profile.email}`}><FiMail aria-hidden="true" /> {t('contact.email')}</a>
           </div>
         </div>
       </div>
-      
-      <footer className="footer-bottom">
-        <p>
-          Designed & Built by <span className="accent">Yassir Amraani</span> &copy; {new Date().getFullYear()}
-        </p>
+      <footer>
+        <span>{t('footer', { year: new Date().getFullYear() })}</span>
+        <a className="back-to-top" href="#home">{t('nav.backToTop')} <FiArrowUp aria-hidden="true" /></a>
       </footer>
     </section>
   );
